@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for dir in $1*
+do
+    cd $dir
+    echo $(pwd)
+    # run sra module with $2 being protein ref
+    ./bin/sra_analysis.sh $2 *.fasta
+    cd ..
+done

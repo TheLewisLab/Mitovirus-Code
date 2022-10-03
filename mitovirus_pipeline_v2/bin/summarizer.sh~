@@ -1,0 +1,10 @@
+#!/bin/bash
+
+touch Mitovirus_summary.csv
+
+for node in ./$1*
+do
+    cd $node
+    cat summary.csv >> ../Mitovirus_summary.csv
+    cd ..
+done
